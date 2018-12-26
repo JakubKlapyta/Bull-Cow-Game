@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class BullCowControl {
     public static void main(String[] args) {
         System.out.println("HELLO");
+        System.out.println();
+        System.out.println();
         String word = "";
         int choose = 0;
         Dictionary dictionary = new Dictionary();
