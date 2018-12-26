@@ -9,6 +9,7 @@ public class BullCowControl {
         System.out.println("HELLO");
         System.out.println();
         System.out.println();
+        System.out.println();
         String word = "";
         int choose = 0;
         Dictionary dictionary = new Dictionary();
