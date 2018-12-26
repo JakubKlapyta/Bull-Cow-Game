@@ -87,7 +87,7 @@ public class BullCowControl {
             } else if (choose == 5) {
                 bullCow.quit();
             } else {
-                System.out.println("NO SUCH OPTON IN MENU");
+                System.out.println("NO SUCH OPTION IN MENU");
             }
         } while (choose != 5);
     }
