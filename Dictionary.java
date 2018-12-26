@@ -6,43 +6,42 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Dictionary {
+class Dictionary {
     private String[] readOutFiles;
     private String wordsToReadOut;
     private String drawn;
     private int length = 0;
     private int numberInList;
     private int maxStringLength;
-    ArrayList<String> words = new ArrayList<>();
+    private ArrayList<String> words = new ArrayList<>();
 
-    public String readOutFile() {
+    void readOutFile() {
 
         File fileData = new File("bullCow.txt");
         this.wordsToReadOut = "";
         try {
             Scanner scanner = new Scanner(fileData);
             while (scanner.hasNextLine()) {
-                wordsToReadOut = wordsToReadOut + scanner.nextLine() + "\n";
+                wordsToReadOut += scanner.nextLine() + "\n";
             }
         } catch (FileNotFoundException e) {
             System.out.println("File not Found");
         }
-        return wordsToReadOut;
+
     }
 
-    public void addElement() {
+    void addElement() {
         this.readOutFiles = wordsToReadOut.split(" ");
         for (int x = 0; x < readOutFiles.length; x++) {
             words.add(readOutFiles[x]);
+
         }
 
     }
 
-    public void showArray() {
-        System.out.println(words);
-    }
 
-    public String draw() {
+
+    String draw() {
         do {
             Random random = new Random();
             numberInList = random.nextInt(words.size());
@@ -52,16 +51,16 @@ public class Dictionary {
         return words.get(numberInList);
     }
 
-    public int drawnLength() {
+    int drawnLength() {
 
         return drawn.length();
     }
 
-    public void setPasswordLength(int length) {
+    void setPasswordLength(int length) {
         this.length = length;
     }
 
-    public int maxLength() {
+     int maxLength() {
         for (int x = 0; x < readOutFiles.length; x++) {
             if (readOutFiles[x].length() > maxStringLength) {
                 this.maxStringLength = readOutFiles[x].length();
