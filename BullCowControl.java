@@ -1,4 +1,4 @@
-package com.company;
+
 
 
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class BullCowControl {
     public static void main(String[] args) {
-
+        System.out.println("HELLO");
         String word = "";
         int choose = 0;
         Dictionary dictionary = new Dictionary();
